@@ -1,0 +1,158 @@
+EESchema Schematic File Version 4
+LIBS:Cherger_LiIon-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:LM2575-5.0BT U?
+U 1 1 5DA1C3B5
+P 5350 3700
+F 0 "U?" H 5350 4067 50  0000 C CNN
+F 1 "LM2575-12BT" H 5350 3976 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-5_Vertical" H 5350 3450 50  0001 L CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/lm2575.pdf" H 5350 3700 50  0001 C CNN
+	1    5350 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:INDUCTOR L?
+U 1 1 5DA286D6
+P 6700 3800
+F 0 "L?" H 6700 4015 50  0000 C CNN
+F 1 "L" H 6700 3924 50  0000 C CNN
+F 2 "Inductor_SMD:L_Bourns_SRR1210A" H 6700 3800 50  0001 C CNN
+F 3 "~" H 6700 3800 50  0001 C CNN
+	1    6700 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D?
+U 1 1 5DA28EC7
+P 6150 4150
+F 0 "D?" V 6104 4229 50  0000 L CNN
+F 1 "D" V 6195 4229 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 6150 4150 50  0001 C CNN
+F 3 "~" H 6150 4150 50  0001 C CNN
+	1    6150 4150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5DA296E0
+P 7150 4100
+F 0 "C?" H 7268 4146 50  0000 L CNN
+F 1 "C" H 7268 4055 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_8x10" H 7188 3950 50  0001 C CNN
+F 3 "~" H 7150 4100 50  0001 C CNN
+	1    7150 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 5DA29B6F
+P 4150 4000
+F 0 "C?" H 4268 4046 50  0000 L CNN
+F 1 "C" H 4268 3955 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x7.7" H 4188 3850 50  0001 C CNN
+F 3 "~" H 4150 4000 50  0001 C CNN
+	1    4150 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DA2A0EE
+P 5350 4500
+F 0 "#PWR?" H 5350 4250 50  0001 C CNN
+F 1 "GND" H 5355 4327 50  0000 C CNN
+F 2 "" H 5350 4500 50  0001 C CNN
+F 3 "" H 5350 4500 50  0001 C CNN
+	1    5350 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3800 4750 3800
+Wire Wire Line
+	4750 3800 4750 4150
+Wire Wire Line
+	4750 4150 5350 4150
+Wire Wire Line
+	5350 4150 5350 4000
+Wire Wire Line
+	5350 4150 5350 4400
+Connection ~ 5350 4150
+Wire Wire Line
+	4850 3600 4150 3600
+Wire Wire Line
+	4150 3600 4150 3850
+Wire Wire Line
+	5850 3800 6150 3800
+Wire Wire Line
+	6150 4000 6150 3800
+Connection ~ 6150 3800
+Wire Wire Line
+	6150 3800 6450 3800
+Wire Wire Line
+	6150 4300 6150 4400
+Wire Wire Line
+	6150 4400 5350 4400
+Connection ~ 5350 4400
+Wire Wire Line
+	5350 4400 5350 4500
+Wire Wire Line
+	5350 4400 4150 4400
+Wire Wire Line
+	4150 4400 4150 4150
+Wire Wire Line
+	7150 4250 7150 4400
+Wire Wire Line
+	7150 4400 6150 4400
+Connection ~ 6150 4400
+Wire Wire Line
+	7150 3950 7150 3800
+Wire Wire Line
+	7150 3800 6950 3800
+Wire Wire Line
+	5850 3600 7150 3600
+Wire Wire Line
+	7150 3600 7150 3800
+Connection ~ 7150 3800
+$Comp
+L power:+5V #PWR?
+U 1 1 5DA51A87
+P 7150 3450
+F 0 "#PWR?" H 7150 3300 50  0001 C CNN
+F 1 "+5V" H 7165 3623 50  0000 C CNN
+F 2 "" H 7150 3450 50  0001 C CNN
+F 3 "" H 7150 3450 50  0001 C CNN
+	1    7150 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+12V #PWR?
+U 1 1 5DA59228
+P 4150 3500
+F 0 "#PWR?" H 4150 3350 50  0001 C CNN
+F 1 "+12V" H 4165 3673 50  0000 C CNN
+F 2 "" H 4150 3500 50  0001 C CNN
+F 3 "" H 4150 3500 50  0001 C CNN
+	1    4150 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 3500 4150 3600
+Connection ~ 4150 3600
+Connection ~ 7150 3600
+Wire Wire Line
+	7150 3450 7150 3600
+$EndSCHEMATC
